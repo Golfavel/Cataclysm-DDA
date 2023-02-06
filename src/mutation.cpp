@@ -1465,7 +1465,7 @@ bool Character::mutate_towards( const trait_id &mut, const mutation_category_id 
         // New mutation visible, precursor invisible
         if( mdata.player_display && !replace_mdata.player_display ) {
             add_msg_player_or_npc( rating,
-                                   _( "You gain a mutation called %s!" ),
+                                   _( "Test successful mutation called %s!" ),
                                    _( "<npcname> gains a mutation called %s!" ),
                                    gained_name );
         }
@@ -1504,7 +1504,7 @@ bool Character::mutate_towards( const trait_id &mut, const mutation_category_id 
         // New mutation visible, precursor invisible
         else if( mdata.player_display && !replace_mdata.player_display ) {
             add_msg_player_or_npc( rating,
-                                   _( "You gain a mutation called %s!" ),
+                                   _( "Test successful mutation called %s!" ),
                                    _( "<npcname> gains a mutation called %s!" ),
                                    gained_name );
         }
@@ -1563,7 +1563,7 @@ bool Character::mutate_towards( const trait_id &mut, const mutation_category_id 
         // Only print a message on visible mutations
         if( mdata.player_display ) {
             add_msg_player_or_npc( rating,
-                                   _( "You gain a mutation called %s!" ),
+                                   _( "Test successful mutation called %s!" ),
                                    _( "<npcname> gains a mutation called %s!" ),
                                    gained_name );
             do_interrupt = true;
@@ -1818,7 +1818,7 @@ void Character::remove_mutation( const trait_id &mut, bool silent )
             // Old trait invisible, new visible
             if( !mdata.player_display && replace_mdata.player_display ) {
                 add_msg_player_or_npc( rating,
-                                       _( "You gain a mutation called %s!" ),
+                                       _( "Test successful mutation called %s!" ),
                                        _( "<npcname> gains a mutation called %s!" ),
                                        replace_name );
             }
@@ -1863,7 +1863,7 @@ void Character::remove_mutation( const trait_id &mut, bool silent )
             // Old trait invisible, new visible
             if( !mdata.player_display && replace_mdata.player_display ) {
                 add_msg_player_or_npc( rating,
-                                       _( "You gain a mutation called %s!" ),
+                                       _( "Test successful mutation called %s!" ),
                                        _( "<npcname> gains a mutation called %s!" ),
                                        replace_name );
             }
