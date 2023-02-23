@@ -835,6 +835,43 @@
     }
   },
   {
+    "id": "MISSION_ACQUIRE_PLANKS",
+    "type": "mission_definition",
+    "name": { "str": "Find some spare planks and nails for reinforcement" },
+    "description": "Gather <color_light_blue>30 wooden* planks</color> and bring them back",
+    "goal": "MGOAL_CONDITION",
+    "goal_condition": {
+      "and": [
+        { "u_has_items": { "item": "2x4", "count": 30 } },
+        { "u_has_items": { "item": "nail", "count": 60 } },
+        { "u_has_items": { "item": "*item with hammering*", "count": 1 } }
+      ]
+    },
+    "difficulty": 1,
+    "value": 0,
+    "has_generic_rewards": false,
+    "origins": [ "ORIGIN_OPENER_NPC", "ORIGIN_ANY_NPC" ],
+    "start": { "assign_mission_target": { "om_terrain": "forest", "reveal_radius": 3 } },
+    "end": {
+      "effect": [
+        { "u_sell_item": "2x4", "count": 30 }
+        { "u_sell_item": "nail", "count": 60 }
+        { "u_sell_item": "*item with hammering*", "count": 1 }
+      ]
+    },
+    "dialogue": {
+      "describe": "unknown appearance of 'MISSION_ACQUIRE_PLANKS'",
+      "offer": "I've been salvaging what I can around here, but I'm beginning to run a little low on planks despite it, and I'm completely out of nails; could you help me out? I think with maybe 30 planks and twice as many nails I should be good for a while.",
+      "accepted": "Oh, great!  I imagine it'll be a bit much to try take them all at once, so you can them here as you get them.",
+      "rejected": "Shoot. Hopefully I won't need them then",
+      "advice": "Everything's made of wood nowadays: chairs, tables, floors, walls. They'll typically have nails holding them together too. Even if you have to smash the stuff, you should be able to salvage something.",
+      "inquire": "Got the supplies? I'm noticing a bit of rot on the boards over there...",
+      "success": "Oh, fantastic! Great appreciations *needs reward*",
+      "success_lie": "Wonderful, could you hand them over?",
+      "failure": "Well, that's a shame."
+    }
+  },
+  {
     "id": "MISSION_PYROMANIAC",
     "type": "mission_definition",
     "name": { "str": "Angry pyromaniac" },
